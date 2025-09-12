@@ -72,7 +72,7 @@ export const slides = Object.fromEntries(
 ) as Record<string, SlideData>;
 
 export const slidesToElements = (
-  initial: string,
+  _initial: string,
   slides: Record<string, SlideData>,
 ) => {
   // Define the organized grid layout
@@ -89,7 +89,7 @@ export const slidesToElements = (
   const edges: Edge[] = [];
 
   // Position slides in organized rows
-  Object.entries(gridLayout).forEach(([rowName, slideIds], rowIndex) => {
+  Object.entries(gridLayout).forEach(([_rowName, slideIds], rowIndex) => {
     slideIds.forEach((slideId, colIndex) => {
       const data = slides[slideId];
       if (data) {
