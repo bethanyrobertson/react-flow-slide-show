@@ -11,7 +11,7 @@ interface SectionHeaderProps {
 const SectionHeader = ({ category, title, icon: Icon, description, className = "" }: SectionHeaderProps) => {
   return (
     <div className={`text-center ${className}`}>
-      <div className="inline-flex items-center rounded-full bg-gray-200 justify-center gap-2 px-3 py-1 mb-4">
+      <div className="inline-flex items-center rounded-full justify-center gap-2 px-3 py-1 mb-4" style={{ backgroundColor: '#d7e0e1' }}>
         <Icon className="w-4 h-4 text-primary" />
         <span className="text-sm font-medium text-primary uppercase tracking-wider">
           {category}

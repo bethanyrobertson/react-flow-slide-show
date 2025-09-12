@@ -15,7 +15,7 @@ export type ExperimentalCodeProps = {
 };
 
 const DEFAULTS: Required<Omit<ExperimentalCodeProps, "className" | "background">> & { background: string } = {
-  background: "#dac4e1",
+  background: "#f0f0f0",
   eyebrow: "Entry points to PROGRamming",
   title: "Experimental Code",
   description:

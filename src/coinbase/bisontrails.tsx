@@ -5,8 +5,8 @@ import CategoryBadge from "../category-badge";
 
 const BisonTrails = () => {
   return (
-    <section className="py-4 px-4 h-full flex items-center">
-      <div className="flex flex-col gap-4 md:flex-row h-full">
+    <section className="h-full w-full flex items-center justify-center p-8">
+      <div className="flex flex-col gap-4 md:flex-row max-w-7xl mx-auto items-center">
         <div className="flex flex-col gap-3 md:w-1/2 pl-0 text-left">
           <div className="flex flex-col gap-3">
             <div className="w-fit">
@@ -48,7 +48,7 @@ const BisonTrails = () => {
           <img
             src="https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/92ec90cc-89f7-44e0-5234-d2676ff14300/public"
             alt="placeholder"
-            className="h-full w-full rounded-lg border object-cover"
+            className="h-180 w-full rounded-lg border object-cover"
           />
           <p className="mt-1 text-xs text-muted-foreground text-center">
             A look at some of my work at Bison Trails

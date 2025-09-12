@@ -12,7 +12,7 @@ const features = [
     className: '',
     images: [
       {
-        src: 'https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/3f8557d6-43e8-4b2e-9157-0af7ad7a5f00/public',
+        src: 'https://www.brober.xyz/_next/image?url=%2Fimages%2Fcasestudies%2Fcloud%2Fpictograms-cloud-2.png&w=1920&q=75',
         alt: 'Security and encryption concepts',
         width: 700,
         height: 320,
@@ -27,7 +27,7 @@ const features = [
     className: '',
     images: [
       {
-        src: 'https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/86815628-5da5-4f09-78c2-3da7eb59e800/public',
+        src: 'https://www.brober.xyz/_next/image?url=%2Fimages%2Fcasestudies%2Fcloud%2Fcloud-illo-1.png&w=1920&q=75',
         alt: 'Developer tools and APIs',
         width: 700,
         height: 320,
@@ -55,7 +55,7 @@ const features = [
       '',
     images: [
       {
-        src: 'https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/428b641a-0a1e-4578-d425-5689ed36cb00/public',
+        src: 'https://www.brober.xyz/_next/image?url=%2Fimages%2Fcasestudies%2Fcloud%2Fcloud-shape-language.png&w=1920&q=75',
         alt: 'Nodes and network topology',
         width: 700,
         height: 320,

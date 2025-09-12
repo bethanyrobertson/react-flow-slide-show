@@ -68,7 +68,7 @@ const AtmDex = () => {
           className="mt-8 flex gap-4 max-lg:flex-col-reverse border rounded-xl p-4 md:mt-8 md:p-6 lg:mt-10 lg:p-8"
         >
           <TabsList className="flex h-auto justify-start overflow-x-auto rounded-xl p-1.5 lg:basis-1/4 lg:flex-col tabs-list-override" style={{ 
-            backgroundColor: 'rgb(234 242 241)'
+            backgroundColor: '#d7e0e1'
           }}>
             {FEATURES.map((feature) => (
                 <TabsTrigger
@@ -98,7 +98,7 @@ const AtmDex = () => {
           {FEATURES.map((feature) => (
             <TabsContent
                 className={cn(
-                'bg-background m-0 flex-1 rounded-xl overflow-hidden'
+                'm-0 flex-1 rounded-xl overflow-hidden'
                 )}
                 key={feature.title}
                 value={feature.title}

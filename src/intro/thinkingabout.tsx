@@ -1,6 +1,6 @@
 const DesignSystemIntro = () => {
   return (
-    <div className="bg-[#dac4e1] w-full h-full flex items-center">
+    <div className="w-full h-full flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 w-full">
         <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-16">
           {/* Left Content */}

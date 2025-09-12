@@ -71,8 +71,8 @@ const ITEMS: ItemType[] = [
 
 const LearningsDex = () => {
   return (
-    <section id="learnings" className="py-16 md:py-28 lg:py-32">
-      <div className="container">
+    <section id="learnings" className="h-full w-full flex items-center justify-center p-8">
+      <div className="w-full max-w-7xl mx-auto">
         <SectionHeader
             category="INSIGHTS"
             title="Satisfaction Scores Are Not the End-all Be-all"
@@ -81,14 +81,14 @@ const LearningsDex = () => {
             className="border-none"
         />
 
-        <div className="mt-4 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-6 md:grid-rows-5 lg:mt-6">
+        <div className="mt-6 grid grid-cols-1 gap-3 md:mt-8 md:grid-cols-6 md:grid-rows-3 lg:mt-6">
           {ITEMS.map((item, i) => {
             const gridClasses = {
-              0: 'md:col-span-3 md:row-span-3',
-              1: 'md:col-span-3 md:row-span-3 md:col-start-4',
-              2: 'md:col-span-2 md:row-span-2 md:row-start-4',
-              3: 'md:col-span-2 md:row-span-2 md:col-start-3 md:row-start-4',
-              4: 'md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-4',
+              0: 'md:col-span-3 md:row-span-1',
+              1: 'md:col-span-3 md:row-span-1 md:col-start-4',
+              2: 'md:col-span-2 md:row-span-1 md:row-start-2 h-32',
+              3: 'md:col-span-2 md:row-span-1 md:col-start-3 md:row-start-2 h-32',
+              4: 'md:col-span-2 md:row-span-1 md:col-start-5 md:row-start-2 h-32',
             }[i];
             return <Item key={i} {...item} className={gridClasses} />;
           })}
@@ -107,7 +107,7 @@ const Item = ({
   return (
     <Card
       className={cn(
-        'relative flex flex-col overflow-hidden border bg-white shadow-none max-md:min-h-[400px]',
+        'relative flex flex-col overflow-hidden border bg-white shadow-none max-md:min-h-[300px]',
         className,
       )}
     >
@@ -120,7 +120,7 @@ const Item = ({
         </p>
       </CardHeader>
 
-      <CardContent className="relative min-h-40 flex-1 overflow-hidden p-0 lg:min-h-40">
+      <CardContent className="relative min-h-24 flex-1 overflow-hidden p-0 lg:min-h-24">
         <img
           src={image.src}
           alt={image.alt}
