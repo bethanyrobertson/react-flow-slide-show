@@ -1,7 +1,7 @@
 'use client'
 
 import { Search } from "lucide-react";
-import CategoryBadge from "./category-badge";
+import CategoryBadge from "../category-badge";
 
 const BisonTrails = () => {
   return (

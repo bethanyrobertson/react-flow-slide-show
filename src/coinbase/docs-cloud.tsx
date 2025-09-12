@@ -52,7 +52,7 @@ const DocsCloud = () => {
           <div className="lg:col-span-7">
             <div className="grid gap-6 sm:grid-cols-2">
               {features.map((feature, idx) => (
-                <div key={idx} className="p-4 rounded-lg border border-border/50 bg-card/50">
+                <div key={idx} className="p-4 rounded-lg border">
                   <feature.icon className="size-6 text-primary" />
                   <h3 className="mt-3 font-mono text-foreground font-bold text-base">{feature.title}</h3>
                   <p className="mt-2 font-sans text-sm text-muted-foreground leading-relaxed">

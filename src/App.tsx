@@ -24,7 +24,7 @@ export default function App() {
         case "ArrowUp":
         case "ArrowDown":
         case "ArrowRight": {
-          const direction = event.key.slice(5).toLowerCase() as keyof SlideData;
+          const direction = event.key.slice(5).toLowerCase() as keyof Pick<SlideData, 'left' | 'up' | 'down' | 'right'>;
           const target = slide[direction];
 
           // Prevent the arrow keys from scrolling the page when React Flow is

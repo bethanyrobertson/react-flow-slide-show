@@ -8,7 +8,7 @@ const features = [
   {
     description: 'Security and encryption concepts',
     subDescription:
-      "Illustrations blend universally recognized security symbols (locks, keys, shields) with subtle technical details to convey both trustworthiness and sophisticated cryptographic processes.",
+      "",
     className: '',
     images: [
       {
@@ -23,7 +23,7 @@ const features = [
   {
     description: 'Developer tools and APIs',
     subDescription:
-      "Technical workflow illustrations use familiar development metaphors enhanced with blockchain-specific visual cues to bridge the gap between traditional programming concepts and Web3 development paradigms.",
+      "",
     className: '',
     images: [
       {
@@ -38,7 +38,7 @@ const features = [
   {
     description: 'Smart contracts and transactions',
     subDescription:
-      'Visual metaphors combine familiar document and process symbols with blockchain-specific elements to make invisible computational workflows tangible.',
+      '',
     images: [
       {
         src: 'https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/cb8e44b7-0f55-4b57-295d-a9c2112fcd00/public',
@@ -52,7 +52,7 @@ const features = [
   {
     description: 'Nodes and network topology',
     subDescription:
-      'Illustrations use connected geometric forms with dynamic visual indicators to represent abstract distributed systems as intuitive network maps.',
+      '',
     images: [
       {
         src: 'https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/428b641a-0a1e-4578-d425-5689ed36cb00/public',
@@ -73,13 +73,13 @@ export function CloudIllustration() {
           category="SOLUTION"
           title="Depicting Complex Concepts in Web3"
           icon={Lightbulb}
-          description=" Icons and Illustrations needed to work at multiple scales—from dashboard overview to detailed network monitoring. Used consistent geometric principles (circles for nodes, lines for connections) to create intuitive mental models for developers managing distributed infrastructure."
+          description=""
           className=""
         />
 
         {/* The following div is likely causing the misalignment */}
-        <div className="border-none py-10" />
-        <div className="grid grid-cols-1 gap-18 rounded-lg md:grid-cols-2">
+        <div className="border-none py-5" />
+        <div className="grid grid-cols-1 gap-6 rounded-lg md:grid-cols-2">
           {features.map((feature, index) => (
             <div
               key={index}

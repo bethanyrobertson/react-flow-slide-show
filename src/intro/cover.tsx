@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import BoxCarousel, { type BoxCarouselRef, type CarouselItem } from "../ui/carousel/box-carousel"
-import useScreenSize from "@/hooks/use-screen-size"
+import useScreenSize from "../hooks/use-screen-size"
 
 import Typewriter from "../ui/text/typewriter"
 

@@ -1,6 +1,5 @@
-import { type NodeProps, useReactFlow } from "reactflow";
+import { type NodeProps } from "reactflow";
 import { Remark } from "react-remark";
-import { useCallback } from "react";
 
 export type SlideData = {
   source?: string;
@@ -23,7 +22,7 @@ const style = {
   height: `${SLIDE_HEIGHT}px`,
 } satisfies React.CSSProperties;
 
-export function Slide({ data, id }: NodeProps<SlideData>) {
+export function Slide({ data }: NodeProps<SlideData>) {
   const { source, component: Component } = data;
 
   return (
@@ -55,24 +54,7 @@ export function Slide({ data, id }: NodeProps<SlideData>) {
           justifyContent: 'center' 
         }}>
           <div style={{ textAlign: 'center', maxWidth: '90%', maxHeight: '90%' }}>
-            <Remark 
-              components={{
-                img: ({ src, alt, ...props }) => (
-                  <img 
-                    src={src} 
-                    alt={alt} 
-                    style={{ 
-                      maxWidth: '100%', 
-                      maxHeight: '80vh', 
-                      objectFit: 'contain',
-                      borderRadius: '8px',
-                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
-                    }} 
-                    {...props} 
-                  />
-                )
-              }}
-            >
+            <Remark>
               {source || ''}
             </Remark>
           </div>
