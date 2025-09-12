@@ -7,10 +7,18 @@ import App from "./App.tsx";
 import "reactflow/dist/style.css";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ReactFlowProvider>
-      <App />
-    </ReactFlowProvider>
-  </React.StrictMode>,
-);
+console.log("main.tsx - Starting React app...");
+console.log("main.tsx - Root element:", document.getElementById("root"));
+
+try {
+  ReactDOM.createRoot(document.getElementById("root")!).render(
+    <React.StrictMode>
+      <ReactFlowProvider>
+        <App />
+      </ReactFlowProvider>
+    </React.StrictMode>,
+  );
+  console.log("React app mounted successfully!");
+} catch (error) {
+  console.error("Error mounting React app:", error);
+}

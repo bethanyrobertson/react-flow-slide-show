@@ -3,7 +3,8 @@ import { Remark } from "react-remark";
 import { useCallback } from "react";
 
 export type SlideData = {
-  source: string;
+  source?: string;
+  component?: React.ComponentType;
   left?: string;
   up?: string;
   down?: string;
@@ -22,29 +23,61 @@ const style = {
   height: `${SLIDE_HEIGHT}px`,
 } satisfies React.CSSProperties;
 
-export function Slide({ data }: NodeProps<SlideData>) {
-  const { source, left, up, down, right } = data;
-  const { fitView } = useReactFlow();
-
-  const moveToNextSlide = useCallback(
-    (event: React.MouseEvent, id: string) => {
-      // Prevent the click event from propagating so `onNodeClick` is not
-      // triggered when clicking on the control buttons.
-      event.stopPropagation();
-      fitView({ nodes: [{ id }], duration: 100 });
-    },
-    [fitView],
-  );
+export function Slide({ data, id }: NodeProps<SlideData>) {
+  const { source, component: Component } = data;
 
   return (
-    <article className="slide" style={style}>
-      <Remark>{source}</Remark>
-      <footer className="slide__controls nopan">
-        {left && <button onClick={(e) => moveToNextSlide(e, left)}>←</button>}
-        {up && <button onClick={(e) => moveToNextSlide(e, up)}>↑</button>}
-        {down && <button onClick={(e) => moveToNextSlide(e, down)}>↓</button>}
-        {right && <button onClick={(e) => moveToNextSlide(e, right)}>→</button>}
-      </footer>
+    <article 
+      className="slide"
+      style={{
+        ...style,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
+      {Component ? (
+        <div style={{ 
+          width: '100%', 
+          height: '100%', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center' 
+        }}>
+          <Component />
+        </div>
+      ) : (
+        <div style={{ 
+          width: '100%', 
+          height: '100%', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center' 
+        }}>
+          <div style={{ textAlign: 'center', maxWidth: '90%', maxHeight: '90%' }}>
+            <Remark 
+              components={{
+                img: ({ src, alt, ...props }) => (
+                  <img 
+                    src={src} 
+                    alt={alt} 
+                    style={{ 
+                      maxWidth: '100%', 
+                      maxHeight: '80vh', 
+                      objectFit: 'contain',
+                      borderRadius: '8px',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+                    }} 
+                    {...props} 
+                  />
+                )
+              }}
+            >
+              {source || ''}
+            </Remark>
+          </div>
+        </div>
+      )}
     </article>
   );
 }
