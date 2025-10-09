@@ -5,6 +5,7 @@ import BoxCarouselDemo from "./intro/cover.tsx";
 import Interests from "./intro/interests";
 import ExperimentalCode from "./intro/experimentalcode";
 import ThinkingAbout from "./intro/thinkingabout";
+import { DesignSystems } from "./intro/designsystems";
 // import ArchiveBoard from "./intro/archiveboard";
 
 // DirectExpress components
@@ -27,12 +28,13 @@ import { DevsCloud } from "./coinbase/devs-cloud";
 import { DocsCloud } from "./coinbase/docs-cloud";
 import { BisonTrails } from "./coinbase/bisontrails";
 
-// Row 1 (top row) - 5 slides with flow to next row
+// Row 1 (top row) - 5 slides with flow to next row (slide03 hidden)
 const slide01 = { id: "01", data: { left: "04", right: "02", down: "06", component: BoxCarouselDemo } };
 const slide02 = { id: "02", data: { left: "01", right: "05", down: "07", component: Interests } };
-const slide03 = { id: "03", data: { left: "05", right: "04", down: "08", component: ExperimentalCode } };
-const slide04 = { id: "04", data: { left: "03", right: "06", down: "09", component: ThinkingAbout } }; // right goes to first slide of row 2
-const slide05 = { id: "05", data: { left: "02", right: "03", down: "10", source: `![Archive Board](https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/597d0c9a-0bf5-435e-30d0-2b20dd145500/public)` } };
+// const slide03 = { id: "03", data: { left: "05", right: "24", down: "08", component: ExperimentalCode } }; // Hidden, replaced by DesignSystems
+const slide04 = { id: "04", data: { left: "24", right: "06", down: "09", component: ThinkingAbout } }; // At end of row 1
+const slide05 = { id: "05", data: { left: "02", right: "24", down: "10", source: `![Archive Board](https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/597d0c9a-0bf5-435e-30d0-2b20dd145500/public)` } };
+const slide24 = { id: "24", data: { left: "05", right: "04", down: "08", component: DesignSystems } }; // Replaced ExperimentalCode in position 3
 
 // Row 2 - ALL DirectExpress components (8 slides) with flow to next row
 const slide06 = { id: "06", data: { left: "04", right: "07", up: "01", down: "15", component: HeroDirectExpress } }; // left goes back to last slide of row 1
@@ -55,7 +57,7 @@ const slide21 = { id: "21", data: { left: "20", right: "22", up: "12", component
 const slide22 = { id: "22", data: { left: "21", right: "23", up: "13", component: DevsCloud } };
 const slide23 = { id: "23", data: { left: "22", right: "01", up: "13", component: NodesCloud } }; // right goes to first slide of row 1
 
-const slideArray = [slide01, slide02, slide03, slide04, slide05, slide06, slide07, slide08, slide09, slide10,
+const slideArray = [slide01, slide02, slide05, slide24, slide04, slide06, slide07, slide08, slide09, slide10,
  slide11, slide12, slide13, slide15, slide16, slide17, slide18, slide19, slide20,
  slide21, slide22, slide23];
 
@@ -77,8 +79,8 @@ export const slidesToElements = (
 ) => {
   // Define the organized grid layout
   const gridLayout = {
-    // Row 1 (top row) - 5 slides
-    row1: ["01", "02", "05", "03", "04"],
+    // Row 1 (top row) - 5 slides (slide03 hidden, slide24 replaces slide03, slide04 at end)
+    row1: ["01", "02", "05", "24", "04"],
     // Row 2 (DirectExpress) - 8 slides  
     row2: ["06", "07", "08", "09", "10", "11", "12", "13"],
     // Row 3 (Coinbase) - 9 slides

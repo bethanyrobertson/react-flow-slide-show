@@ -1,5 +1,5 @@
 import { KeyboardEventHandler, useCallback, useState } from "react";
-import ReactFlow, { useReactFlow, NodeMouseHandler } from "reactflow";
+import ReactFlow, { useReactFlow, NodeMouseHandler, Controls } from "reactflow";
 
 import { Slide, SlideData } from "./Slide";
 import { slides, slidesToElements } from "./slides";
@@ -56,12 +56,19 @@ export default function App() {
       nodes={nodes}
       nodeTypes={nodeTypes}
       nodesDraggable={false}
+      panOnScroll
+      zoomOnPinch
+      zoomOnDoubleClick={false}
+      panOnDrag={[1, 2]}
       edges={edges}
       fitView
       fitViewOptions={{ nodes: [{ id: initialSlide }], duration: 100 }}
       minZoom={0.1}
+      maxZoom={1.5}
       onKeyDown={handleKeyPress}
       onNodeClick={handleNodeClick}
-    />
+    >
+      <Controls showInteractive={false} />
+    </ReactFlow>
   );
 }
