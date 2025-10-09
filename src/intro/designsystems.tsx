@@ -57,19 +57,19 @@ const DesignSystems = () => {
           </p>
 
         </div>
-        <DraggableCardContainer className="relative flex h-[80vh] w-full items-center justify-center lg:h-full">
+        <DraggableCardContainer className="relative flex h-[80vh] w-full items-center justify-center lg:h-full overflow-visible">
           {items.map((item) => (
             <DraggableCardBody
               key={item.title}
               className={cn(
                 item.className,
-                "-translate-x-20 bg-white scale-75 rounded-2xl p-3 lg:translate-x-0 lg:scale-100",
+                "bg-white scale-75 rounded-2xl p-3 shadow-lg lg:scale-100",
               )}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-82 pointer-events-none relative z-10 w-80 rounded-2xl object-cover"
+                className="h-64 pointer-events-none relative z-10 w-64 rounded-2xl object-cover"
               />
               <h3 className="mt-4 text-center text-xl tracking-tighter">
                 {item.title}
