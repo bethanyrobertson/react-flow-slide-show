@@ -3,7 +3,6 @@ import { SLIDE_WIDTH, SLIDE_HEIGHT, SLIDE_PADDING, SlideData } from "./Slide.tsx
 import TrustDex from "./trust-dex";
 import BoxCarouselDemo from "./intro/cover.tsx";
 import Interests from "./intro/interests";
-import ExperimentalCode from "./intro/experimentalcode";
 import ThinkingAbout from "./intro/thinkingabout";
 import { DesignSystems } from "./intro/designsystems";
 // import ArchiveBoard from "./intro/archiveboard";
