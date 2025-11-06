@@ -30,7 +30,7 @@ const PersonasDex = () => {
         category="STRATEGY"
         title="What we heard"
         icon={Search}
-        description="Users "
+        description=""
                   className="border-none"
       />
 
