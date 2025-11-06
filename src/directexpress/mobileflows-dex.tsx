@@ -29,12 +29,12 @@ const MobileFlowsDex = () => {
               className="absolute bottom-4 right-4"
             >
               <a
-                href="https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/8115d3a0-6092-45cd-a759-84626bbabc00/public"
+                href="https://www.figma.com/design/8l00E9hm8sQMuQcJiqa5tt/-Onsite--Bethany-Roberston--Figma-?node-id=44-49162&t=gxIuH5QqLb7Um1EB-1"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <ExternalLink className="w-4 h-4" />
-                View Full Image
+                View Figma
               </a>
             </Button>
           </div>
