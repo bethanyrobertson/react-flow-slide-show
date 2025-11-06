@@ -7,28 +7,28 @@ import CategoryBadge from "../category-badge";
 const features = [
     {
     id: "feature-1",
-    title: "Reassuring",
+    title: "Looking at the full current flow",
     description:
-      "We developed a warm, but neutral, color palette to reduce anxiety around financial management.",
+      "The experience is time consuming and causing drop-offs",
     href: "#",
-    image: "https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/16f65919-90d9-4d44-8124-a298ec91d200/public",
+    image: "https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/ff6e1def-3127-475a-b5f6-7f9e5891a100/public",
   },
   {
     id: "feature-2",
-    title: "Accessible",
+    title: "Applying a Jobs to be Done framework",
     description:
-      "Type design leveraged high contrast ratios and scalable design elements; we chose Noto Sans as the primary typeface for its multi -language support.",
+      "Evaluating how user goals meet hiring Brex for the job",
     href: "#",
-    image: "https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/59e1a2d8-0328-4230-8cd1-5fdda080ef00/public",
+    image: "https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/7a319689-6608-431c-3458-7a4513f81300/public",
   },
 
   {
     id: "feature-3",
-    title: "Clear Communication for All",
+    title: "Exploration in the sandbox",
     description:
-      "Traditionally difficult-to-grasp concepts are made easy through a straightforward illustration system.",
+      "Rethinking the flow as well as other future enhancements",
     href: "#",
-    image: "https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/b069a8e7-d3d1-4e59-212d-0f14ad71d500/public",
+    image: "https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/f5782a47-526d-47e2-659f-412d7fee2000/public",
   },
 ];
 
@@ -48,15 +48,15 @@ const TechnicalFeaturesDirectExpress = () => {
           <div className="flex shrink-0 flex-col gap-6 md:w-1/2 md:pr-8 lg:pr-24 lg:text-left 2xl:pr-32">
             <div className="w-fit">
               <CategoryBadge
-                label="SOLUTION"
+                label="PROCESS"
                 icon={Lightbulb}
               />
             </div>
             <h2 className="font-mono text-3xl tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            Accessibility Through Visual Identity Principles
+            How I got here
             </h2>
             <p className="mb-16 text-muted-foreground">
-            We created a trustworthy identity that balanced government authority with human warmth. The visual system needed to work across digital platforms, printed materials, and physical card design.
+            I combined data and a framing through a Jobs to be Done lens to look at the full current experience.
             </p>
             <ul className="space-y-2">
               {features.map((feature, i) => (

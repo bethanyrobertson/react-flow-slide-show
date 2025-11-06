@@ -12,6 +12,7 @@ export default function Interests() {
                 <li>My Tibetan Spaniel "Mochi"</li>
                 <li>Travel: Sri Lanka, Nepal, India</li>
                 <li>Baking</li>
+                <li>Originally from Tennessee and my grandparents raised horses</li>
               </ul>
             </div>
   

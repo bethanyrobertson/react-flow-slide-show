@@ -46,37 +46,39 @@ const DesignSystems = () => {
     <section 
       className="relative grid w-screen overflow-visible border-none py-32 lg:min-h-screen"
     >
-      <div className="container relative z-10 h-full grid-cols-1 items-center justify-center gap-10 lg:grid lg:grid-cols-2">
+      <div className="container relative z-10 h-full grid grid-cols-1 items-center justify-center gap-10 lg:grid-cols-2">
         <div className="flex flex-col items-center justify-center text-center lg:items-start lg:text-left">
           <h1 className="font-mono max-w-lg text-7xl">
             Design Systems
           </h1>
-          <p className="text-muted-foreground mt-10 text-lg max-w-md">
-            0 to 1 : Coinbase Cloud, Aptos Labs, Vector API, Direct Express, Mucinex
+          <p className="mt-10 text-lg max-w-md text-muted-foreground">
+            0 to 1 : Coinbase Cloud, Aptos Labs, Vector API, Direct Express, Mucinex<br />
             Contributor: Google, Coinbase
           </p>
 
         </div>
-        <DraggableCardContainer className="relative flex h-[80vh] w-full items-center justify-center lg:h-full overflow-visible">
+        <div className="relative w-full h-[80vh] lg:h-full lg:min-h-[600px]">
+          <DraggableCardContainer className="relative w-full h-full overflow-visible">
           {items.map((item) => (
             <DraggableCardBody
               key={item.title}
               className={cn(
+                "bg-white scale-75 rounded-2xl p-3 shadow-lg lg:scale-100 z-10",
                 item.className,
-                "bg-white scale-75 rounded-2xl p-3 shadow-lg lg:scale-100",
               )}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-64 pointer-events-none relative z-10 w-64 rounded-2xl object-cover"
+                className="h-80 w-80 mx-auto relative z-10 rounded-2xl object-cover"
               />
               <h3 className="mt-4 text-center text-xl tracking-tighter">
                 {item.title}
               </h3>
             </DraggableCardBody>
           ))}
-        </DraggableCardContainer>
+          </DraggableCardContainer>
+        </div>
       </div>
     </section>
   );

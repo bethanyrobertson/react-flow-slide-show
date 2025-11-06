@@ -10,12 +10,12 @@ import {
 const features = [
   {
     title: 'Client',
-    description: 'U.S. Treasury & BNY & MoCaFi',
+    description: 'Brex',
     icon: UsersRound,
   },
   {
     title: 'Scope',
-    description: "0-1 digital experience design and rebranding",
+    description: "Onboarding flow and UI",
     icon: CircleDot,
   },
   {
@@ -25,7 +25,7 @@ const features = [
   },
   {
     title: 'Timeline',
-    description: 'Oct 2024 - August 2025',
+    description: '2 days',
     icon: Calendar,
   },
 ];
@@ -37,11 +37,11 @@ export default function HeroDirectExpress() {
         {/* Left side - Main content */}
         <div className="flex-1">
           <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            Direct Express
+            Increasing Conversions at Point of Entry
           </h1>
 
           <p className="text-muted-foreground mt-5 font-sans text-l md:text-xl lg:text-xl">
-          Redesign of the US Treasury’s Direct Express application, transforming federal benefits access for America’s most vulnerable citizens.
+          Decreasing dropoffs through an improved onboarding flow
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -71,9 +71,9 @@ export default function HeroDirectExpress() {
       <div className="container mt-12 md:mt-20 lg:mt-24">
         <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full">
           <img
-            src='https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/89d3d237-8218-4805-4c63-9e3a7cac0200/public'
+            src='https://imagedelivery.net/N-MD9o_LYLdDJqNonHl96g/a8c043ea-8403-4080-0d2c-d38e8a033700/public'
             alt="hero"
-            className="rounded-3xl object-cover object-left-top shadow-sm w-full h-full"
+            className="rounded-3xl object-cover object-center shadow-sm w-full h-full"
           />
         </div>
       </div>

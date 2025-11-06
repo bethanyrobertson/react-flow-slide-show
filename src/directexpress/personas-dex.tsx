@@ -28,9 +28,9 @@ const PersonasDex = () => {
     <section className="container py-16 md:py-28 lg:py-32">
       <SectionHeader
         category="STRATEGY"
-        title="Audiences"
+        title="What we heard"
         icon={Search}
-        description="Three distinct user types create a complex user ecosystem that requires flexible functionality and architecture. "
+        description="Users "
                   className="border-none"
       />
 
