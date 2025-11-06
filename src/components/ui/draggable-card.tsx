@@ -179,7 +179,8 @@ export const DraggableCardBody = ({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "relative min-h-96 w-80 overflow-hidden rounded-md bg-white p-6 shadow-none",
+        // removed forced `relative` so callers can control positioning (absolute etc.)
+        "min-h-96 w-80 overflow-hidden rounded-md bg-white p-6 shadow-none",
         className,
       )}
     >
@@ -204,7 +205,7 @@ export const DraggableCardContainer = ({
   const containerRef = useRef<HTMLDivElement>(null);
   
   return (
-    <div ref={containerRef} className={cn("[perspective:3000px]", className)}>
+    <div ref={containerRef} className={cn("relative w-full h-full overflow-visible [perspective:3000px]", className)}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child as React.ReactElement<any>, {
