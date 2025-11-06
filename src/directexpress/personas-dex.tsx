@@ -1,25 +1,25 @@
-import { Search, UserRound, HeartHandshake, CreditCard } from 'lucide-react';
+import { Search, Frame, ClockAlert, CreditCard } from 'lucide-react';
 
 import SectionHeader from '../section-header';
 
 const values = [
   {
-    title: 'Direct beneficiaries',
+    title: 'Drop-Offs during application stage',
     description:
-      'Most users: they sign up and receive one or more benefits and can directly access their money via the app or physical debit card.',
-    icon: UserRound,
-  },
-  {
-    title: 'Representative Payees',
-    description:
-      'Many beneficiaries require a handler to manage their funds for them. These handlers must also be able to access the app and manage their ward\'s funds.',
-    icon: HeartHandshake,
-  },
-  {
-    title: 'Multiple card scenarios',
-    description:
-      'Some beneficiaries have more complex benefit structures, managing more than one type of benefit, potentially with multiple debit cards.',
+      'Brex has received feedback that the current workflow is cumbersome and time-consuming, resulting in higher drop-off rates during the application stage.',
     icon: CreditCard,
+  },
+  {
+    title: 'Delays',
+    description:
+      'This friction delays new customers getting started using Brex.',
+    icon: ClockAlert,
+  },
+  {
+    title: 'The ask',
+    description:
+      'Design a more streamlined, user-friendly workflow that enables customer to complete their applications smoothly and get started using Brex faster.',
+    icon: Frame,
   },
 ];
 
